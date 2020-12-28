@@ -1,0 +1,86 @@
+dvhtool (1.0.1-5) unstable; urgency=low
+
+  * debhelper version 5
+  * Standards version 3.7.2
+  * use cdbs and quilt
+  * patches:
+       warn_type_guess.diff: emit a warning if uint32_t is undefined
+       xopen_source.diff: define _XOPEN_SOURCE == 500 for the pread prototypes
+  * acinclude: fix underquotd macros,
+  * acinclude: fix __attribute__(noreturn) detection with gcc 4.1
+  * run "autoreconf -i -f"
+
+ -- Guido Guenther <agx@sigxcpu.org>  Mon, 25 Sep 2006 18:01:02 +0200
+
+dvhtool (1.0.1-4) unstable; urgency=low
+
+  * fix manpage to display properly in UTF8 locale
+  * clarify {-d,--device} option in dhvtool's manpage and --help output
+    (Closes: #223934)
+
+ -- Guido Guenther <agx@debian.org>  Sat, 27 Dec 2003 18:53:05 +0100
+
+dvhtool (1.0.1-3) unstable; urgency=low
+
+  * fix typo in README.Debian
+  * fix dh_make boilerplate in copyright file
+  * build-depend on debhelper (>=4) and use debian/compat
+  * honor DEB_BUILD_OPTIONS
+  * bump Standards-Version to 3.6.1 
+
+ -- Guido Guenther <agx@debian.org>  Sun, 26 Oct 2003 19:32:06 +0100
+
+dvhtool (1.0.1-2) unstable; urgency=low
+
+  * cosmetics only for woody
+  * dvhtool should no longer be used to move kernels into the vh
+    on MIPS so fix the package description
+  * move dvhtool's manpage to section 8
+
+ -- Guido Guenther <agx@debian.org>  Sat, 23 Feb 2002 02:16:30 +0100
+
+dvhtool (1.0.1-1) unstable; urgency=low
+
+  * new upstream version
+  * one upstream author in debian/copyright must be enough
+  * fix wrong calculation of free space in vh (which could cause
+    disk corruption)
+  * add Linux partition types
+
+ -- Guido Guenther <agx@debian.org>  Fri,  5 Oct 2001 22:43:11 +0200
+
+dvhtool (1.0-2) unstable; urgency=low
+
+  * removed dh_suidregister from debian/rules
+  * fixed packet description
+  * build on all architectures
+  * bump standards version to 3.5.5
+  * use install -s since we're building with -g
+
+ -- Guido Guenther <agx@debian.org>  Thu, 19 Jul 2001 23:31:15 +0200
+
+dvhtool (1.0-1) unstable; urgency=low
+
+  * New upstream version
+  * add build-dependency on debhelper 
+  * install volhdr-1.dat as example
+  * install CONTRIBUTORS file
+  * cleanup copyright file
+
+ -- Guido Guenther <agx@debian.org>  Mon, 13 Nov 2000 00:27:08 +0100
+
+dvhtool (0.20001101-1) unstable; urgency=low
+
+  * New upstream version 
+
+ -- Guido Guenther <agx@debian.org>  Wed,  1 Nov 2000 15:48:49 +0100
+
+dvhtool (0.20001017-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Guido Guenther <agx@debian.org>  Tue, 17 Oct 2000 00:14:57 +0200
+
+Local variables:
+mode: debian-changelog
+End:

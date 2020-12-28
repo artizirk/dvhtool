@@ -1,0 +1,9 @@
+config.log
+config.h
+config.cache
+config.status
+dvhtool
+dvhtool.spec
+stamp-h.in
+*.tar.gz
+Makefile

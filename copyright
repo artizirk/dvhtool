@@ -1,0 +1,13 @@
+This package was debianized by Guido Guenther <agx@debian.org> on
+Tue, 17 Oct 2000 00:14:57 +0200.
+
+It was downloaded from oss.sgi.com's cvs repository. See README.Debian 
+for details.
+
+Upstream Author: Ralf Baechle <ralf@gnu.org>
+
+Copyright: 
+
+ You are free to distribute this software under the terms of the GNU General
+ Public License. The full text of this license can be found in the file
+ /usr/share/common-licenses/GPL

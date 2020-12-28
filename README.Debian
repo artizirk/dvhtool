@@ -1,0 +1,8 @@
+dvhtool for Debian
+----------------------
+
+You can check out the original source from oss.sgi.com's cvs archive (password cvs):
+cvs -d:pserver:cvs@oss.sgi.com:/cvs login
+cvs -d:pserver:cvs@oss.sgi.com:/cvs co dvhtool
+
+ -- Guido Guenther <agx@debian.org>, Tue, 17 Oct 2000 00:14:57 +0200

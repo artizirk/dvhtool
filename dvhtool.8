@@ -1,0 +1,92 @@
+.TH DVHTOOL 8 "July 2000"
+.UC 4
+.SH NAME
+dvhtool \- Disk volume header manipulation tool
+.SH SYNOPSIS
+.B "dvhtool "
+.B \-\-device
+.I devicename
+[ option ]
+
+.B "dvhtool "
+.B \-d
+.I devicename
+[ option ]
+.SH DESCRIPTION
+.I dvhtool
+is a utility for displaying SGI disk partition and volume header information
+as well as for copying files to and from the volume header.
+
+It is similar to the IRIX(tm) utility of the same name, however the options
+and usage are quite different.  Also, the IRIX utility cannot display
+partition and boot file information.
+
+The disk volume header includes the disk partition table and the volume
+directory.  The volume directory is an index to the files stored in the
+volume header part of the disk.  These files can be anything but are
+usually standalone programs (like
+.IR sash ,
+the SGI standalone shell).  The space available for files is usually
+limited to one, two or a few megabytes, this can only be changed by
+repartitioning the disk with
+.IR fx ,
+the SGI disk formatting and partitioning tool or
+.IR fdisk .
+
+You must be root to invoke
+.IR dvhtool .
+The device name can be
+.I /dev/sda
+for the first disk, 
+.I /dev/sdb
+for the second, and so on.
+
+.I dvhtool
+will also work on a file image of a disk volume header.
+
+.SM OPTIONS
+.BI "\-d,  \-\-device " "devicename"
+Specify the volume header device name (or file image)
+.TP
+.B \-\-print-volume-header
+Show volume header data only
+.TP
+.B \-\-print-volume-directory
+Show volume table of contents
+.TP
+.B \-\-print-partitions
+Show partition data
+.TP
+.B \-\-print-all
+Equivalent to all three above options
+.TP
+.B \-\-vh-remove \fIname\fP
+Remove volhdr file
+.IR name .
+.TP
+.B \-\-vh-to-unix \fIname file\fP
+Copy volhdr file
+.I name
+to Unix file
+.I file
+.TP
+.B \-\-unix-to-vh \fIfile name\fP
+Copy Unix file
+.I file
+to volhdr as
+.I name
+.TP
+.B \-\-help
+Show usage information
+
+.SH SEE ALSO
+fdisk(8)
+.TP
+IRIX tools: fx(1M), prtvtoc(1M), vh(7M).
+
+
+.SH AUTHORS
+.PP
+.I dvhtool
+was written by Ralf Baechle <ralf@oss.sgi.com>, Keith M. Wesolowski <wesolows@foobazco.org>,
+Tor Arntsen <tor@spacetec.no>, Guido Guenther <agx@debian.org>. 

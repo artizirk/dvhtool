@@ -1,0 +1,13 @@
+Source: dvhtool
+Section: utils
+Priority: optional
+Maintainer: Guido Guenther <agx@sigxcpu.org>
+Standards-Version: 3.7.2
+Build-Depends: debhelper (>=5), cdbs, quilt
+
+Package: dvhtool
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Manipulate the volume header on sgi partition layouts
+ This tool is used to manipulate volume headers of devices using sgi disk
+ labels, like moving files into and out of the volume header.

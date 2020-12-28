@@ -1,0 +1,5 @@
+2001-08-21  Ralf Baechle  <ralf@gnu.org>
+
+	* dvhtool.c (DEVICE): Define to /dev/sd0k for NetBSD systems.
+	* configure.in: Bump version number to 1.0.1.
+	* configure: Rebuild using autoconf 2.13.
